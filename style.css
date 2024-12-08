@@ -1,0 +1,115 @@
+/* Reset default padding and margins */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Main container with full viewport height */
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #3498db; /* Blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Row to hold the form and weather data */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px; /* Limit width for larger screens */
+    margin: 10px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Styling the search input */
+#search {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px grey;
+    width: 70%; /* Responsive width */
+    max-width: 400px; /* Limit maximum size */
+    margin-right: 10px; /* Space between input and button */
+}
+
+/* Styling the button */
+button {
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #1f6390;
+}
+
+/* Weather display section */
+#weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+    color: white;
+}
+
+/* Weather icon styling */
+#weather img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Weather temperature and description styling */
+#weather h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#weather h4 {
+    font-size: 24px;
+    color: #ecf0f1;
+}
+
+/* For smaller screens (Mobile devices) */
+@media (max-width: 600px) {
+    .row {
+        font-size: 30px; /* Reduce font size for small screens */
+    }
+
+    #search {
+        width: 80%; /* Make input larger for smaller screens */
+    }
+
+    button {
+        font-size: 20px;
+        padding: 8px 16px; /* Smaller button for mobile */
+    }
+
+    #weather {
+        font-size: 18px;
+    }
+
+    #weather img {
+        width: 60px;
+        height: 60px; /* Resize weather icon */
+    }
+}
